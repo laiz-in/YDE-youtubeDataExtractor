@@ -14,7 +14,3 @@ Objectives of this project
    * number of comments
    * title of the video
    * thumbnail of the video
-
-3. design a mySQL schema for each youtubers with required columns
-4. design a mongodb collections for storing comments and video thumbnails (thumbnails needs to be in base64 format)
-5. for UI create a simple webpage to input the youtuber name to get the details
