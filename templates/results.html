@@ -1,44 +1,47 @@
-<!DOCTYPE html>
-<html lang="en" >
+<meta charset="UTF-8">
+<title>scrapped data</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>scrapped data</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
-      <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
 
 
 </head>
 
 <body>
 
-  <div class="table-users">
-   <div class="header">Reviews</div>
+<div class="table-users">
+ <div class="header">{{youtubername}}</div>
 
-   <table cellspacing="0">
-      <tr>
-         <th>Product</th>
-         <th>Name</th>
-         <th>Rating</th>
-         <th>Comment Heading</th>
-         <th width="230">Comments</th>
-      </tr>
-         {% for data in datas %}
-      <tr>
-          <td>{{datas['VideoLiknks']}}</td>
-         <td>rtry</td>
-         <td>rty</td>
-         <td>rtytr</td>
-         <td>rty</td>
-       {% endfor %}
-   </table>
+ <table cellspacing="0">
+    <tr>
+
+        <th width="15"> SN</th>
+        <th width="155">videolinks</th>
+        <th width="165">videotitles</th>
+        <th width="30">Published</th>
+        <th width = "20">videolength</th>
+        <th width = "25">likeCount</th>
+        <th width = "25">viewcount</th>
+        <th width = "25">totalcomments</th>
+
+    </tr>
+       {% for i in range(51) %}
+    <tr>
+
+        <td>{{ i+1 }}</td>
+        <td>{{videolink[i] }}</td>
+        <td>{{videotitle[i] }}</td>
+        <td>{{published[i] }}</td>
+        <td>{{ videolenghth[i]}}</td>
+        <td>{{likecount[i] }}</td>
+        <td>{{viewcount[i] }}</td>
+        <td>{{totalcomments[i] }}</td>
+     {% endfor %}
+ </table>
 </div>
-
-
 
 </body>
 
